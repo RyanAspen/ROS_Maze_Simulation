@@ -79,7 +79,7 @@
 	</model>
 
 	<model name="box2">
-	  <pose> 4.500000 1.500000  0.5 0 0 0</pose>
+	  <pose> 2.500000 1.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>
@@ -99,7 +99,7 @@
 	</model>
 
 	<model name="box3">
-	  <pose> 1.500000 2.500000  0.5 0 0 0</pose>
+	  <pose> 3.500000 1.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>
@@ -119,7 +119,7 @@
 	</model>
 
 	<model name="box4">
-	  <pose> 4.500000 2.500000  0.5 0 0 0</pose>
+	  <pose> 4.500000 1.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>
@@ -139,7 +139,7 @@
 	</model>
 
 	<model name="box5">
-	  <pose> 1.500000 3.500000  0.5 0 0 0</pose>
+	  <pose> 5.500000 1.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>
@@ -159,7 +159,7 @@
 	</model>
 
 	<model name="box6">
-	  <pose> 3.500000 3.500000  0.5 0 0 0</pose>
+	  <pose> 6.500000 1.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>
@@ -179,7 +179,7 @@
 	</model>
 
 	<model name="box7">
-	  <pose> 4.500000 3.500000  0.5 0 0 0</pose>
+	  <pose> 7.500000 1.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>
@@ -199,7 +199,7 @@
 	</model>
 
 	<model name="box8">
-	  <pose> 1.500000 4.500000  0.5 0 0 0</pose>
+	  <pose> 8.500000 1.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>
@@ -219,7 +219,7 @@
 	</model>
 
 	<model name="box9">
-	  <pose> 2.500000 4.500000  0.5 0 0 0</pose>
+	  <pose> 1.500000 2.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>
@@ -239,7 +239,7 @@
 	</model>
 
 	<model name="box10">
-	  <pose> 3.500000 4.500000  0.5 0 0 0</pose>
+	  <pose> 1.500000 3.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>
@@ -259,7 +259,67 @@
 	</model>
 
 	<model name="box11">
-	  <pose> 4.500000 4.500000  0.5 0 0 0</pose>
+	  <pose> 1.500000 4.500000  0.5 0 0 0</pose>
+	  <link name="box\_link">
+	    <visual name="visual">
+	      <geometry>
+		<box>
+		  <size>1 1 1</size>
+		</box>
+	      </geometry>
+	    </visual>
+	    <collision name='collision'>
+	      <geometry>
+		<box>
+		  <size>1 1 1</size>
+		</box>
+	      </geometry>
+	    </collision>
+	  </link>
+	</model>
+
+	<model name="box12">
+	  <pose> 1.500000 5.500000  0.5 0 0 0</pose>
+	  <link name="box\_link">
+	    <visual name="visual">
+	      <geometry>
+		<box>
+		  <size>1 1 1</size>
+		</box>
+	      </geometry>
+	    </visual>
+	    <collision name='collision'>
+	      <geometry>
+		<box>
+		  <size>1 1 1</size>
+		</box>
+	      </geometry>
+	    </collision>
+	  </link>
+	</model>
+
+	<model name="box13">
+	  <pose> 1.500000 6.500000  0.5 0 0 0</pose>
+	  <link name="box\_link">
+	    <visual name="visual">
+	      <geometry>
+		<box>
+		  <size>1 1 1</size>
+		</box>
+	      </geometry>
+	    </visual>
+	    <collision name='collision'>
+	      <geometry>
+		<box>
+		  <size>1 1 1</size>
+		</box>
+	      </geometry>
+	    </collision>
+	  </link>
+	</model>
+
+	<model name="box14">
+	  <pose> 1.500000 7.500000  0.5 0 0 0</pose>
 	  <link name="box\_link">
 	    <visual name="visual">
 	      <geometry>

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -11,18 +12,14 @@ const string TEMP_PATH2 = "gazebo/template2.txt";
 const string BOX_PATH1 = "gazebo/box1.txt";
 const string BOX_PATH2 = "gazebo/box2.txt";
 const string COMPLETE_GAZEBO_PATH = "gazebo/maze.sdf";
+const string GRID_PATH = "gazebo/grid.txt";
 
 int box_num = 1;
 const int MIN_X = 1;
 const int MIN_Y = 1;
-const int LENGTH_X = 4;
-const int LENGTH_Y = 4;
-const bool grid[][LENGTH_X] = {
-  {true, false, false, true},
-  {true, false, false, true},
-  {true, false, true, true},
-  {true, true, true, true}
-};
+int rows = 0;
+int columns = 0;
+bool grid[1000] = {};
 
 string read_file(string path)
 {
@@ -38,6 +35,37 @@ string read_file(string path)
   return fileContent;
 }
 
+void create_grid()
+{
+  string contents = read_file(GRID_PATH);
+  stringstream ss(contents);
+  string line;
+  int j = 0;
+  rows = 0;
+  while (!ss.eof())
+  {
+    getline(ss, line, '\n');
+    rows++;
+    if (columns < line.length())
+    {
+      columns = line.length();
+    }
+    cout << "Columns = " << columns << endl;
+    for (int i = 0; i < columns; i++)
+    {
+      cout << line[i];
+      if (line[i] != '0')
+      {
+	cout << " True" << endl;
+	grid[j] = true;
+      }
+      cout << endl;
+      j++;
+    }
+    cout << j << endl;
+  }
+}
+
 string create_box(int x, int y)
 {
   float posX = x + 0.5;
@@ -50,14 +78,20 @@ string create_box(int x, int y)
 int main()
 {
   string gazebo_text = read_file(TEMP_PATH1);
-  for (int y = 0; y < LENGTH_Y; y++)
+  create_grid();
+  cout << "End of grid creation, rows = " << rows << ", columns = " << columns << endl;
+  for (int y = 0; y < rows; y++)
   {
-    for (int x = 0; x < LENGTH_X; x++)
+    for (int x = 0; x < columns; x++)
     {
-      if (grid[y][x])
+      int j = y*columns + x;
+      cout << grid[j];
+      if (grid[j])
       {
+	cout << " True";
 	gazebo_text.append("\n" + create_box(x + MIN_X, y + MIN_Y));
       }
+      cout << endl;
     }
   }
   gazebo_text.append("\n" + read_file(TEMP_PATH2));
