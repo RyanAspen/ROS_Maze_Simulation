@@ -1,17 +1,3 @@
-This package is meant to hold Gazebo files for the robot simulation and any scripts needed for initializing that simulation.
+This package is meant to hold Gazebo files for the robot simulation and any scripts needed for initializing that simulation. To create a new Gazebo file, modify gazebo/grid.txt, which represents the grid of walls in the final simulation. "0" represents empty space while any other character represents a solid wall.
 
-TODO:
-- Create Gazebo file with robot description that responds to Twist commands (Done)
-- Add basic world features to Gazebo file (Done)
-- Test (Done)
-- Create script to generate new Gazebo files with grid worlds (need to modify hyperparameters)
-
-To start up bidirectional communication between ROS and Gazebo for Twist messages, use the following command:
-
-- ros2 run ros_gz_bridge parameter_bridge /cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist
-
-To create new Gazebo files, run
-- "g++ -o test create_gazebo.cpp"
-- "./test"
-
-The new Gazebo file will be under the gazebo folder.
+Simulation is now handled by the full.sh script (not in this repo).
